@@ -136,6 +136,45 @@
 			</li>
 			<li>
 				<div class="collapsible-header" style="background-color: #dbdbdb; color:black">
+					<i class="material-icons">expand_more</i>Migration Information</div>
+				<div class="collapsible-body" style="background-color: #dbdbdb; color:black">
+					<p>Work has started on boatbot lazer (v2.0.0a), for which the source can be viewed at <a href="https://github.com/0xg0ldpk3rx0/SupportBot" target="_blank">https://github.com/0xg0ldpk3rx0/SupportBot</a>
+Please note this is a source-available project and not an open source project. All copyright rights remain reserved. (Also thank you @Josh Baker from Ohio for hosting the repo)</p>
+<p>The following things will never be made available for public viewing: BoatBot v1 code and the website code.</p>
+
+<p>The reason why I'm doing this rewrite is so we can continue to grow beyond the shard limit of 2500 servers, and so I can maintain the BoatBot service more easily (with your help and bug reports). I started the v1 code as a beginner in javascript and it's too difficult to manage now, so it's time to move on from the 13k lines of boatbot v1 spaghetti.</p>
+
+<p>The structure of the boatbot lazer migration will be as follows:</p>
+<ol>
+<li>Boatbot v1 and lazer will run on the boatbot account at the same time</li>
+<li>A feature from v1 will be ported to lazer</li>
+<li>This feature will be tested on betabot for issues</li>
+<li>The feature will be released on lazer software and disabled on v1 software</li>
+<li>Go back to step 1 until all core features are migrated</li>
+</ol>
+
+<p>During this time, you may see 2 different (or duplicate) responses to the same command as both v1 and lazer are running concurrently. Not all features will be ported before v1 is disabled permanently on the boatbot account. Some features from v1 will not be available in lazer. The migration will take place over a long period of time; it could be anywhere from 2 months to 6 months but I would like to have this done <span style="text-decoration: line-through;">by the end of 2018.</span></p>
+
+<p>When the v1 bot is deprecated and removed from service on the boatbot account:</p>
+
+<ul class="browser-default">
+<li>We will broadcast a single-message PSA in all servers</li>
+<li>Bot adding will become public again until we reach about 7k servers or until an unforseen scaling problem becomes apparent</li>
+<li>A new [BOT] account will be created for v1 boatbot but the software will not be maintained or updated (this is for people who need some obscure, deprecated feature from v1)</li>
+<li>Tracking will also be permanently disabled on the v1 account.</li>
+<li>Server preferences for v1 and lazer will be separated so for example, a v1 !personalizations on will have no effect on lazer settings</li>
+<li>The v1 bot will be permanently shut down 6 months after the migration is complete.</li>
+<li>We will stop processing requests for v1 data 1 year after the migration is complete.</li>
+</ul>
+
+<p>We will not be able to provide boatbot+ sales during the migration period. Your service will not be discontinued, but certain premium features may become unavailable. BoatBot+ purchases with active time remaining have already been refunded partially according to the agreement at <a target="_blank" href="https://iaace.gg/refunds.txt">https://iaace.gg/refunds.txt</a> via original purchase method. Donations will not be refunded.</p>
+
+<p>Thank you for sticking with us! The reason why I decided to write, maintain, and accept feature requests for v1 were because of growing number of osu community members who supported us. The reason why I'm rewriting the bot is because I'm reminded of how many people still appreciate boatbot, even when the boat leaks, and even when people jump ship. So many of you sent server invitations to me while public adding was disabled! I had a critical moment with my staff a few months ago where we discussed where we should take the boatbot project, and the idea of stopping all development permanently was on the table. Without you, we would not have boatbot v1, and we surely would not have boatbot lazer. I know we can all look forward to a brighter future.</p>
+<p>- June 23, 2018</p>
+				</div>
+			</li>
+			<li>
+				<div class="collapsible-header" style="background-color: #dbdbdb; color:black">
 					<i class="material-icons">expand_more</i>Migration Timeline</div>
 				<div class="collapsible-body" style="background-color: #dbdbdb; color:black">
 					<table class="bordered striped">
@@ -172,7 +211,7 @@
 							</tr>
 							<tr>
 								<td>Migrate non-osu features from v1 to Lazer</td>
-								<td>Not yet</td>
+								<td>In Progress</td>
 								<td>March 1, 2020</td>
 							</tr>
 							<tr>
