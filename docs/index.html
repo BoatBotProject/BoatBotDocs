@@ -106,6 +106,11 @@
 								<td>⭕</td>
 							</tr>
 							<tr>
+								<td>Works with all osu modes</td>
+								<td>✅</td>
+								<td>⭕</td>
+							</tr>
+							<tr>
 								<td>Easy to use with difficult usernames</td>
 								<td>✅</td>
 								<td>❌</td>
@@ -241,10 +246,10 @@ Please note this is a source-available project and not an open source project. A
 								<li><code>[]</code>: nothing needs to be specified if you want to pull up your own
 									information</li>
 								<li><code>ign</code>: the username (whatever it is)</li>
-								<li><code>$shortcut</code>: any $shortcut set for a user using <code>Lsetshortcut</code>
+								<li><code>$shortcut</code>: any $shortcut set for a user using <code>!setshortcut</code>
 								</li>
 								<li><code>@mention</code>: mention any other discord user</li>
-								<li><code>^</code>: the summoner whose information was most recently requested</li>
+								<li><code>^</code>: the player whose information was most recently requested</li>
 							</ul>
 						</li>
 						<li>command use is not case sensitive.</li>
@@ -260,97 +265,340 @@ Please note this is a source-available project and not an open source project. A
 							</tr>
 							<tr>
 								<td>
-									<pre>&lt;region&gt; [ign resolvable]
-&lt;op.gg link&gt;</pre>
+									<pre>!recent [ign resolvable]
+!r [ign resolvable]</pre>
 								</td>
 								<td>
 									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
-										alt="" />Shows summoner's stats</td>
+										alt="" />Shows your most recent score from any mode</td>
 								<td>
 									<div id="popup">
-										<code><a href="f/1.3-na-command.png">na routuro<span><img src="f/1.3-na-command.png" /></span></a></code>
+										<code><a href="f/recent-j0sh.png">!r j0sh<span><img src="f/recent-j0sh.png" /></span></a></code>
 									</div>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lhelp</pre>
+									<pre>!recentstandard[play#] [ign resolvable]
+!recentstandard[play#] [ign resolvable]
+!rstandard[play#] [ign resolvable]
+!rstd[play#] [ign resolvable]
+!rs[play#] [ign resolvable]</pre>
 								</td>
-								<td>Displays an information card on how to use BoatBot</td>
 								<td>
-									<pre>Lhelp</pre>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Shows your most recent score from standard mode</td>
+								<td>
+									<code>!rs4</code>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<pre>Linvite</pre>
+									<pre>!recenttaiko[play#] [ign resolvable]
+!rtaiko[play#] [ign resolvable]
+!rt[play#] [ign resolvable]</pre>
 								</td>
-								<td>Provides information on how to add BoatBot to a different server</td>
 								<td>
-									<pre>Linvite</pre>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Shows your most recent score from taiko</td>
+								<td>
+									<code>!rt</code>
 								</td>
 							</tr>
-
 							<tr>
 								<td>
-									<pre>Lcomplain &lt;text&gt;</pre>
+									<pre>!recentctb[play#] [ign resolvable]
+!rctb[play#] [ign resolvable]
+!rc[play#] [ign resolvable]</pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Shows your most recent score from catch the beat</td>
+								<td>
+									<code>!rc2</code>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>!recentmania[play#] [ign resolvable]
+!rmania[play#] [ign resolvable]
+!rm[play#] [ign resolvable]</pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Shows your most recent score from mania</td>
+								<td>
+									<code>!rm10</code>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>!scorecompare [ign resolvable] [+mods]
+!scompare [ign resolvable] [+mods]
+!compare [ign resolvable] [+mods]
+!c [ign resolvable] [+mods]</pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Compare a user's score to the most recently posted beatmap. You may optionally specify mods to filter the result. Use <code>+</code> for nomod.</td>
+								<td>
+									<div id="popup">
+										<code><a href="f/compare.png">!compare Amuro +HDHR<span><img src="f/compare.png" /></span></a></code>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>!whatif [ign resolvable] +&lt;new pp value&gt;</pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Calculates net pp change if a new score made it to a user's top 100</td>
+								<td>
+									<div id="popup">
+										<code><a href="f/whatifp400.png">!whatif +400<span><img src="f/whatifp400.png" /></span></a></code>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>!whatif [ign resolvable] &lt;new beatmap pp value&gt;</pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Calculates net pp change if a score on a beatmap was replaced</td>
+								<td>
+									<div id="popup">
+										<code><a href="f/whatif_400.png">!whatif 400<span><img src="f/whatif_400.png" /></span></a></code>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>!statsplus [ign resolvable]
+!sp [ign resolvable]
+!osu [ign resolvable]
+!std [ign resolvable]
+!taiko [ign resolvable]
+!sptaiko [ign resolvable]
+!spt [ign resolvable]
+!ctb [ign resolvable]
+!spctb [ign resolvable]
+!spc [ign resolvable]
+!mania [ign resolvable]
+!spmania [ign resolvable]
+!spm [ign resolvable]</pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Shows detailed osu stats</td>
+								<td>
+									<div id="popup">
+										<code><a href="f/ctb-iaace.png">!ctb iaace<span><img src="f/ctb-iaace.png" /></span></a></code>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>!statsplus-m [ign resolvable]
+!sp-m [ign resolvable]
+!osu-m [ign resolvable]
+!std-m [ign resolvable]
+!taiko-m [ign resolvable]
+!sptaiko-m [ign resolvable]
+!spt-m [ign resolvable]
+!ctb-m [ign resolvable]
+!spctb-m [ign resolvable]
+!spc-m [ign resolvable]
+!mania-m [ign resolvable]
+!spmania-m [ign resolvable]
+!spm-m [ign resolvable]</pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Shows mod breakdown of top 100 scores</td>
+								<td>
+									<div id="popup">
+										<code><a href="f/spm-iaace.png">!sp-m iaace<span><img src="f/spm-iaace.png" /></span></a></code>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>&lt;osu user page link&gt;
+!osusignature [ign resolvable]
+!osusign [ign resolvable]
+!osusig [ign resolvable]</pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Shows basic player information</td>
+								<td>
+									<div id="popup">
+										<code><a href="f/sig-iaace.png">!osusig iaace<span><img src="f/sig-iaace.png" /></span></a></code>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>&lt;osu multi lobby link&gt;</pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Shows the most recently played beatmap and player scores in a multi lobby.</td>
+								<td>
+									<div id="popup">
+										<code><a href="f/mp.png">https://osu.ppy.sh/mp/53867418<span><img src="f/mp.png" /></span></a></code>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>&lt;osu beatmap link&gt; [+mods]
+&lt;osu beatmap download link&gt; [+mods]</pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Shows information on a beatmap/beatmap set.</td>
+								<td>
+									<div id="popup">
+										<code><a href="f/beatmap.png">https://osu.ppy.sh/beatmapsets/372271<span><img src="f/beatmap.png" /></span></a></code>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>!beatmapinfo [+mods]
+!binfo [+mods]</pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Shows information on the most recently posted score or beatmap.</td>
+								<td>
+									<div id="popup">
+										<code><a href="f/binfo.png">!binfo +HDHR<span><img src="f/binfo.png" /></span></a></code>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>!oppai [oppai args]</pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Runs oppai-ng on the most recent beatmap information posted in the same channel.</td>
+								<td>
+									<div id="popup">
+										<code><a href="f/oppai.png">!oppai<span><img src="f/oppai.png" /></span></a></code>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>!stats &lt;username&gt;
+!stat &lt;username&gt;</pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />BoatBot !stats emulator</td>
+								<td>
+									<div id="popup">
+										<code><a href="f/stats-iaace.png">!stats iaace<span><img src="f/stats-iaace.png" /></span></a></code>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>!roll [text]
+!roll [max number]</pre>
+								</td>
+								<td>Returns a random number between 1-100 or 1-max range.</td>
+								<td>
+									<code>!roll 1000</code>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>!coin
+!coinflip
+!flipcoin</pre>
+								</td>
+								<td>Returns HEADS(49%), TAILS(49%), or SIDE (2%).</td>
+								<td>
+									<code>!coin</code>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>!complain &lt;text&gt;</pre>
 								</td>
 								<td>Tell us why BoatBot isn't working out for you.</td>
 								<td>
-									<code>Lcomplain BoatBot is too slow</code>
+									<code>!complain BoatBot is too slow</code>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lsuggest &lt;text&gt;</pre>
+									<pre>!suggest &lt;text&gt;</pre>
 								</td>
 								<td>Give us a suggestion.</td>
 								<td>
-									<code>Lsuggest make this a new command</code>
+									<code>!suggest make this a new command</code>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lpraise &lt;text&gt;</pre>
+									<pre>!praise &lt;text&gt;</pre>
 								</td>
 								<td>Give us a pat on the back.</td>
 								<td>
-									<code>Lpraise BoatBot is great!</code>
+									<code>!praise BoatBot is great!</code>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lask &lt;text&gt;
-Lquestion &lt;text&gt;</pre>
+									<pre>!ask &lt;text&gt;
+!question &lt;text&gt;</pre>
 								</td>
 								<td>Send us your questions.</td>
 								<td>
-									<code>Lask when's the next update coming?</code>
+									<code>!ask when's the next update coming?</code>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lping [text]</pre>
+									<pre>!ping [text]
+!latency [text]</pre>
 								</td>
 								<td>Checks BoatBot response time. If text follows
-									<code>Lping</code>, then the response will be a repeat of the text.</td>
+									<code>!ping</code>, then the response will be a repeat of the text.</td>
 								<td>
-									<code>Lping</code>
+									<code>!ping</code>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<pre>Labout
-Lcredits
-Lacknowledgements
-Lcontributors
-Lcontributions</pre>
+									<pre>!about
+!credits
+!acknowledgements
+!contributors
+!contributions</pre>
 								</td>
 								<td>Shows list of people who have contributed to the BoatBot project</td>
 								<td>
-									<code>Lcredits</code>
+									<code>!credits</code>
 								</td>
 							</tr>
+							<tr>
+									<td>
+										<pre>!owner
+!owners</pre>
+									</td>
+									<td>Shows the current list of CMs and their IDs.</td>
+									<td>
+										<code>!owners</code>
+									</td>
+								</tr>
 						</tbody>
 					</table>
 				</div>
@@ -376,78 +624,76 @@ Lcontributions</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Llink &lt;region&gt; &lt;ign&gt;</pre>
+									<pre>!link &lt;ign&gt;</pre>
 								</td>
-								<td>If your LoL ign is different from your discord username, you can set your LoL ign
+								<td>If your osu ign is different from your discord username, you can set your osu ign
 									using this command, and BoatBot
 									will remember it.</td>
 								<td>
-									<pre>Llink na routuro</pre>
+									<pre>!link iaace</pre>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lgetlink
-Lgl</pre>
+									<pre>!getlink
+!gl</pre>
 								</td>
-								<td>Tells you what LoL username you currently have registered with BoatBot</td>
+								<td>Tells you what osu username you currently have registered with BoatBot</td>
 								<td>
-									<pre>Lgl</pre>
+									<pre>!gl</pre>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lunlink
-Lremovelink</pre>
+									<pre>!unlink
+!removelink</pre>
 								</td>
 								<td>BoatBot forgets your preferred username.</td>
 								<td>
-									<pre>Lunlink</pre>
+									<pre>!unlink</pre>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lshortcuts
-Lshortcut</pre>
+									<pre>!shortcuts
+!shortcut</pre>
 								</td>
 								<td>Displays a list of nicknames you've set for friends with hard to spell names. All
 									shortcuts begin with an "$".</td>
 								<td>
-									<pre>Lshortcuts</pre>
+									<pre>!shortcuts</pre>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lsetshortcuts $&lt;nickname&gt; &lt;ign&gt;
-Lsetshortcut $&lt;nickname&gt; &lt;ign&gt;
-Lss $&lt;nickname&gt; &lt;ign&gt;
-Lcreateshortcut $&lt;nickname&gt; &lt;ign&gt;
-Laddshortcut $&lt;nickname&gt; &lt;ign&gt;</pre>
+									<pre>!setshortcut $&lt;nickname&gt; &lt;ign&gt;
+!ss $&lt;nickname&gt; &lt;ign&gt;
+!createshortcut $&lt;nickname&gt; &lt;ign&gt;
+!addshortcut $&lt;nickname&gt; &lt;ign&gt;</pre>
 								</td>
 								<td>Add a nickname to your preferences.</td>
 								<td>
-									<pre>Lss $jon Scùffed</pre>
+									<pre>!ss $test -_ _-_ []</pre>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lremoveshortcut $&lt;nickname&gt;
-Lrs $&lt;nickname&gt;
-Ldeleteshortcut $&lt;nickname&gt;
-Lds $&lt;nickname&gt;</pre>
+									<pre>!removeshortcut $&lt;nickname&gt;
+!deleteshortcut $&lt;nickname&gt;
+!ds $&lt;nickname&gt;</pre>
 								</td>
 								<td>Remove a nickname from your preferences.</td>
 								<td>
-									<pre>Lrs $jon</pre>
+									<pre>!rs $jon</pre>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lremoveallshortcuts</pre>
+									<pre>!removeallshortcuts</pre>
 								</td>
 								<td>Remove all nicknames from your preferences.</td>
 								<td>
-									<pre>Lremoveallshortcuts</pre>
+									<pre>!removeallshortcuts</pre>
 								</td>
 							</tr>
 						</tbody>
@@ -498,39 +744,19 @@ Lds $&lt;nickname&gt;</pre>
 							<tr>
 								<td>
 									<span style="color: #ff0000">
-										<pre>BoatBotprefix [new prefix]</pre></span>
+										<pre>boatsetprefix [new prefix]</pre></span>
 								</td>
 								<td>Changes the prefix for BoatBot. If none is specified, BoatBot will operate
 									without using prefixes.</td>
 								<td>
 									<pre>L</pre>
 								</td>
-								<td><code>BoatBotprefix !</code></td>
-							</tr>
-							<tr>
-								<td>
-									<span style="color: #ff8800">
-										<pre>Lsetting auto-opgg &lt;on/off&gt;</pre></span>
-								</td>
-								<td>Toggles automatic summoner information when an op.gg link is sent.</td>
-								<td>on</td>
-								<td><code>lsetting auto-opgg off</code></td>
+								<td><code>boatsetprefix !</code></td>
 							</tr>
 							<tr>
 								<td>
 									<span style="color: #ff0000">
-										<pre>Lsetting force-prefix &lt;on/off&gt;</pre></span>
-								</td>
-								<td>Force using a prefix for LoL statistics command that do not require one.
-									(<code>mastery</code>
-									<-> <code>Lmastery</code>)</td>
-								<td>off</td>
-								<td><code>lsetting force-prefix on</code></td>
-							</tr>
-							<tr>
-								<td>
-									<span style="color: #ff0000">
-										<pre>Lsetting release-notifications &lt;on/off&gt;</pre></span>
+										<pre>!setting release-notifications &lt;on/off&gt;</pre></span>
 								</td>
 								<td>Show BoatBot release notes in your server.</td>
 								<td>on</td>
@@ -538,12 +764,21 @@ Lds $&lt;nickname&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<span style="color: #ff0000">
-										<pre>BoatBot settings reset all</pre></span>
+									<span style="color: #ff8800">
+										<pre>!setting abi &lt;on/off&gt;</pre></span>
 								</td>
-								<td>Reset all server settings to default.</td>
-								<td></td>
-								<td><code>BoatBot settings reset all</code></td>
+								<td>Enables or disables automatic beatmap information (ABI).</td>
+								<td>on</td>
+								<td><code>!setting abi off</code></td>
+							</tr>
+							<tr>
+								<td>
+									<span style="color: #ff8800">
+										<pre>!setting global-feedback &lt;on/off&gt;</pre></span>
+								</td>
+								<td>Enables or disables !complain and other boatbot feedback commands.</td>
+								<td>on</td>
+								<td><code>!setting global-feedback off</code></td>
 							</tr>
 						</tbody>
 					</table>
@@ -566,9 +801,19 @@ Lds $&lt;nickname&gt;</pre>
 								<th>ACTION</th>
 								<th>OWNER PERMISSIONS REQUIRED</th>
 							</tr>
+							<td>
+								<td>
+									<pre>!as &lt;target uid&gt; &lt;command to run&gt;</pre>
+								</td>
+								<td>Impersonates using a command as another user in the same server.</td>
+								<td>
+									<span style="color: #ff0000;">Yes</span>
+								</td>
+							<tr>
+							</tr>
 							<tr>
 								<td>
-									<pre>Leval &lt;javascript code&gt;</pre>
+									<pre>eval &lt;javascript code&gt;</pre>
 								</td>
 								<td>Evaluates javascript and sends the result as a reply.</td>
 								<td>
@@ -587,7 +832,7 @@ Lds $&lt;nickname&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lnotify &lt;message&gt;</pre>
+									<pre>notify &lt;message&gt;</pre>
 								</td>
 								<td>Sends a message in each server BoatBot is connected to.</td>
 								<td>
@@ -596,7 +841,7 @@ Lds $&lt;nickname&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lreleasenotify &lt;message&gt;</pre>
+									<pre>!releasenotify &lt;message&gt;</pre>
 								</td>
 								<td>Sends a message about a new BoatBot release to all servers. This type of mass
 									notification can be disabled on a per-server basis.</td>
@@ -606,7 +851,7 @@ Lds $&lt;nickname&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Llink &lt;region&gt; &lt;ign&gt; &lt;@user&gt;</pre>
+									<pre>Llink &lt;ign&gt; &lt;@user&gt;</pre>
 								</td>
 								<td>Sets a link for a different user.</td>
 								<td>
@@ -615,8 +860,8 @@ Lds $&lt;nickname&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lunlink &lt;@user&gt;
-Lremovelink &lt;@user&gt;</pre>
+									<pre>!unlink &lt;@user&gt;
+!removelink &lt;@user&gt;</pre>
 								</td>
 								<td>Removes a link for a different user.</td>
 								<td>
@@ -625,8 +870,8 @@ Lremovelink &lt;@user&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lgetlink &lt;@user&gt;
-Lgl &lt;@user&gt;</pre>
+									<pre>!getlink &lt;@user&gt;
+!gl &lt;@user&gt;</pre>
 								</td>
 								<td>Retrieves a link for a different user.</td>
 								<td>
@@ -635,7 +880,7 @@ Lgl &lt;@user&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lbanuser &lt;user id&gt; &lt;duration&gt; &lt;reason&gt;</pre>
+									<pre>!banuser &lt;user id&gt; &lt;duration&gt; &lt;reason&gt;</pre>
 								</td>
 								<td>Bans a user from using BoatBot. Set duration as
 									<code>0</code> for a permaban. Accepted time modifiers are "H" hours and "D" days.
@@ -646,7 +891,18 @@ Lgl &lt;@user&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lbanserver &lt;server id&gt; &lt;reason&gt;</pre>
+									<pre>!shadowbanuser &lt;user id&gt; &lt;duration&gt; &lt;reason&gt;</pre>
+								</td>
+								<td>Bans a user from using BoatBot. Set duration as
+									<code>0</code> for a permaban. Accepted time modifiers are "H" hours and "D" days. This version does not notify the person banned.
+								</td>
+								<td>
+									<span style="color: #ff0000;">Yes</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>!banserver &lt;server id&gt; &lt;reason&gt;</pre>
 								</td>
 								<td>Bans a server from using BoatBot. Set duration as
 									<code>0</code> for a permaban. Accepted time modifiers are "H" hours and "D" days.
@@ -658,7 +914,19 @@ Lgl &lt;@user&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lwarnuser &lt;user id&gt; &lt;reason&gt;</pre>
+									<pre>!shadowbanserver &lt;server id&gt; &lt;reason&gt;</pre>
+								</td>
+								<td>Bans a server from using BoatBot. Set duration as
+									<code>0</code> for a permaban. Accepted time modifiers are "H" hours and "D" days.
+									If a server is issued a permaban, BoatBot
+									MAY leave the server on its own. This version does not notify the server banned.</td>
+								<td>
+									<span style="color: #ff0000;">Yes</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>!warnuser &lt;user id&gt; &lt;reason&gt;</pre>
 								</td>
 								<td>Warns a user to not abuse BoatBot.</td>
 								<td>
@@ -667,7 +935,7 @@ Lgl &lt;@user&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lwarnserver &lt;server id&gt; &lt;reason&gt;</pre>
+									<pre>!warnserver &lt;server id&gt; &lt;reason&gt;</pre>
 								</td>
 								<td>Warns a server to not abuse BoatBot.</td>
 								<td>
@@ -676,7 +944,7 @@ Lgl &lt;@user&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lnoteuser &lt;user id&gt; &lt;reason&gt;</pre>
+									<pre>!noteuser &lt;user id&gt; &lt;reason&gt;</pre>
 								</td>
 								<td>Quietly makes an internal note about a user.</td>
 								<td>
@@ -685,7 +953,7 @@ Lgl &lt;@user&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lnoteserver &lt;server id&gt; &lt;reason&gt;</pre>
+									<pre>!noteserver &lt;server id&gt; &lt;reason&gt;</pre>
 								</td>
 								<td>Quietly makes an internal note about a server.</td>
 								<td>
@@ -694,7 +962,7 @@ Lgl &lt;@user&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Luserhistory &lt;user id&gt;</pre>
+									<pre>!userhistory &lt;user id&gt;</pre>
 								</td>
 								<td>Views user disciplinary records and notes.</td>
 								<td>
@@ -703,7 +971,7 @@ Lgl &lt;@user&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lserverhistory &lt;server id&gt;</pre>
+									<pre>!serverhistory &lt;server id&gt;</pre>
 								</td>
 								<td>Views server disciplinary records and notes.</td>
 								<td>
@@ -712,7 +980,7 @@ Lgl &lt;@user&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lunbanuser &lt;user id&gt;</pre>
+									<pre>!unbanuser &lt;user id&gt;</pre>
 								</td>
 								<td>Unbans an actively banned user.</td>
 								<td>
@@ -721,7 +989,7 @@ Lgl &lt;@user&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lunbanserver &lt;server id&gt;</pre>
+									<pre>!unbanserver &lt;server id&gt;</pre>
 								</td>
 								<td>Unbans an actively banned server.</td>
 								<td>
@@ -730,7 +998,7 @@ Lgl &lt;@user&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lactionreport &lt;admin user id&gt;</pre>
+									<pre>!actionreport &lt;admin user id&gt;</pre>
 								</td>
 								<td>Shows disciplinary actions issued by any BoatBot admin.</td>
 								<td>
@@ -739,7 +1007,7 @@ Lgl &lt;@user&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lmail &lt;user id&gt; &lt;text&gt;</pre>
+									<pre>!mail &lt;user id&gt; &lt;text&gt;</pre>
 								</td>
 								<td>Send a message to a user, with language flags.</td>
 								<td>
@@ -757,7 +1025,7 @@ Lgl &lt;@user&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Ldeny &lt;message id&gt;</pre>
+									<pre>!deny &lt;message id&gt;</pre>
 								</td>
 								<td>Deny a message in the external feedback channel for public viewing.</td>
 								<td>
@@ -766,21 +1034,20 @@ Lgl &lt;@user&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lstats</pre>
+									<pre>!migratelinks</pre>
 								</td>
-								<td>Detailed status information about software and hardware systems.</td>
+								<td>Migrate links from v1 to v2 database. Will overwrite.</td>
 								<td>
 									<span style="color: #ff0000;">Yes</span>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lsummonerdebug &lt;region&gt; &lt;ign&gt;
-Lsd &lt;region&gt; &lt;ign&gt;</pre>
+									<pre>!cs</pre>
 								</td>
-								<td>Gets account IDs and summoner IDs for LoL.</td>
+								<td>Detailed status information about software and hardware systems.</td>
 								<td>
-									<span style="color: #00ff00;">No</span>
+									<span style="color: #ff0000;">Yes</span>
 								</td>
 							</tr>
 							<tr>
@@ -803,8 +1070,8 @@ Lsd &lt;region&gt; &lt;ign&gt;</pre>
 							</tr>
 							<tr>
 								<td>
-									<pre>Lpermissionstest [@user]
-Lpt [@user]</pre>
+									<pre>!permissionstest [@user]
+!pt [@user]</pre>
 								</td>
 								<td>Shows whether or not someone has elevated permissions in the BoatBot context.
 								</td>
@@ -823,7 +1090,7 @@ Lowners</pre>
 								</td>
 							<tr>
 								<td>
-									<pre>Wping</pre>
+									<pre>wping</pre>
 								</td>
 								<td>Shows ping times on the websocket connection to the internal api server.</td>
 								<td>
