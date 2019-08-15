@@ -73,6 +73,7 @@
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<!--Let browser know website is optimized for mobile-->
+	<link rel="icon" href="favicon.ico">
 </head>
 
 <body>
@@ -240,13 +241,194 @@ Please note this is a source-available project and not an open source project. A
 			</li>
 			<li>
 				<div class="collapsible-header" style="background-color: #dbdbdb; color:black">
-					<i class="material-icons">expand_more</i>General Commands</div>
+					<i class="material-icons">expand_more</i>osu!&nbsp;<b>Score Commands</b></div>
+				<div class="collapsible-body" style="background-color: #dbdbdb; color:black">
+					<table class="bordered striped">
+						<tbody>
+							<tr>
+								<th>
+									<pre>COMMANDS vLazer</pre>
+								</th>
+								<th>ACTION</th>
+								<th>EXAMPLE</th>
+							</tr>
+							<tr>
+								<td>
+									<pre>!recent <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!r <span style="color:#e344a4;font-weight: bold;">[ign?]</span></pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Shows your most recent score from any mode</td>
+								<td>
+									<div id="popup">
+										<code><a href="f/recent-j0sh.png">!r j0sh<span><img src="f/recent-j0sh.png" /></span></a></code>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+Standard mode:
+<pre>!recentstandard[play#] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!recentstandard[play#] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!rstandard[play#] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!rstd[play#] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!rs[play#] <span style="color:#e344a4;font-weight: bold;">[ign?]</span></pre>
+
+Taiko:
+<pre>!recenttaiko[play#] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!rtaiko[play#] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!rt[play#] <span style="color:#e344a4;font-weight: bold;">[ign?]</span></pre>
+
+Catch the Beat:
+<pre>!recentctb[play#] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!rctb[play#] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!rc[play#] <span style="color:#e344a4;font-weight: bold;">[ign?]</span></pre>
+
+Mania:
+<pre>!recentmania[play#] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!rmania[play#] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!rm[play#] <span style="color:#e344a4;font-weight: bold;">[ign?]</span></pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Shows your most recent score from a specified mode. A play # can be specified where 1 is the most recent play and 50 is the 50th most recent play.</td>
+								<td>
+									<div id="popup">
+										<a href="f/recent-j0sh.png"><code>!rs4</code>
+									<br><code>!rt iaace</code>
+									<br><code>!rc2</code>
+									<br><code>!rm10</code><span><img src="f/recent-j0sh.png" /></span></a></code>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+Standard mode:
+<pre>!beststandard[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!beststd[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!best[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!top[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span></pre>
+
+Taiko:
+<pre>!besttaiko[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!toptaiko[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!btaiko[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!ttaiko[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!bt[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!tt[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span></pre>
+
+Catch the Beat:
+<pre>!bestctb[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!topctb[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!bctb[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!tctb[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!bc[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!tc[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span></pre>
+
+Mania:
+<pre>!bestmania[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!topmania[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!bmania[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!tmania[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!bm[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!tm[top #] <span style="color:#e344a4;font-weight: bold;">[ign?]</span></pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Shows one of your top plays. A top score # can be specified where 1 is the highest pp play and 100 is the 100th highest pp play.</td>
+								<td>
+
+									<div id="popup">
+										<a href="f/bm3-design.png"><code>!top</code>
+									<br><code>!bt4</code>
+									<br><code>!tc2 iaace</code>
+									<br><code>!bm3 Design</code><span><img src="f/bm3-design.png" /></span></a></code>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>!scorecompare <span style="color:#e344a4;font-weight: bold;">[ign?]</span> [+mods]
+!scompare <span style="color:#e344a4;font-weight: bold;">[ign?]</span> [+mods]
+!compare <span style="color:#e344a4;font-weight: bold;">[ign?]</span> [+mods]
+!c <span style="color:#e344a4;font-weight: bold;">[ign?]</span> [+mods]</pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Compare a user's score to the most recently posted beatmap. You may optionally specify mods to filter the result. Use <code>+</code> for nomod.</td>
+								<td>
+									<div id="popup">
+										<code><a href="f/compare.png">!compare Amuro +HDHR<span><img src="f/compare.png" /></span></a></code>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>!whatif <span style="color:#e344a4;font-weight: bold;">[ign?]</span> +&lt;new pp value&gt;
+
+!whatiftaiko <span style="color:#e344a4;font-weight: bold;">[ign?]</span> +&lt;new pp value&gt;
+
+!whatifctb <span style="color:#e344a4;font-weight: bold;">[ign?]</span> +&lt;new pp value&gt;
+
+!whatifmania <span style="color:#e344a4;font-weight: bold;">[ign?]</span> +&lt;new pp value&gt;</pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Calculates net pp change if a new score made it to a user's top 100</td>
+								<td>
+									<div id="popup">
+										<code><a href="f/whatifp400.png">!whatif +400<span><img src="f/whatifp400.png" /></span></a></code>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>!whatif <span style="color:#e344a4;font-weight: bold;">[ign?]</span> &lt;new beatmap pp value&gt;
+
+!whatiftaiko <span style="color:#e344a4;font-weight: bold;">[ign?]</span> &lt;new beatmap pp value&gt;
+
+!whatifctb <span style="color:#e344a4;font-weight: bold;">[ign?]</span> &lt;new beatmap pp value&gt;
+
+!whatifmania <span style="color:#e344a4;font-weight: bold;">[ign?]</span> &lt;new beatmap pp value&gt;</pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Calculates net pp change if a score on a beatmap was replaced</td>
+								<td>
+									<div id="popup">
+										<code><a href="f/whatif_400.png">!whatif 400<span><img src="f/whatif_400.png" /></span></a></code>
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<pre>&lt;osu multi lobby link&gt;</pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Shows the most recently played beatmap and player scores in a multi lobby.</td>
+								<td>
+									<div id="popup">
+										<code><a href="f/mp.png">https://osu.ppy.sh/mp/53867418<span><img src="f/mp.png" /></span></a></code>
+									</div>
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</li>
+			<li>
+				<div class="collapsible-header" style="background-color: #dbdbdb; color:black">
+					<i class="material-icons">expand_more</i>osu!&nbsp;<b>Player Commands</b></div>
 				<div class="collapsible-body" style="background-color: #dbdbdb; color:black">
 					<ul class="browser-default">
 						<li><code>&lt;&gt;</code> indicate required parameters and
 							<code>[]</code> indicate optional parameters<br></li>
 						<li>"ign" means osu! username<br></li>
-						<li>what does <code>[ign resolvable]</code> mean?
+						<li>what does <code><span style="color:#e344a4;font-weight: bold;">[ign?]</span></code> mean?
 							<ul class="browser-default">
 								<li><code>[]</code>: nothing needs to be specified if you want to pull up your own
 									information</li>
@@ -269,114 +451,33 @@ Please note this is a source-available project and not an open source project. A
 								<th>EXAMPLE</th>
 							</tr>
 							<tr>
-								<td>
-									<pre>!recent [ign resolvable]
-!r [ign resolvable]</pre>
-								</td>
-								<td>
-									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
-										alt="" />Shows your most recent score from any mode</td>
-								<td>
-									<div id="popup">
-										<code><a href="f/recent-j0sh.png">!r j0sh<span><img src="f/recent-j0sh.png" /></span></a></code>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-Standard mode:
-<pre>!recentstandard[play#] [ign resolvable]
-!recentstandard[play#] [ign resolvable]
-!rstandard[play#] [ign resolvable]
-!rstd[play#] [ign resolvable]
-!rs[play#] [ign resolvable]</pre>
-
+								<td>Standard mode:
+									<pre>!statsplus <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!sp <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!osu <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!std <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+</pre>
 Taiko:
-<pre>!recenttaiko[play#] [ign resolvable]
-!rtaiko[play#] [ign resolvable]
-!rt[play#] [ign resolvable]</pre>
-
+<pre>
+!taiko <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!sptaiko <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!spt <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+</pre>
 Catch the Beat:
-<pre>!recentctb[play#] [ign resolvable]
-!rctb[play#] [ign resolvable]
-!rc[play#] [ign resolvable]</pre>
-
+<pre>
+!ctb <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!spctb <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!spc <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+</pre>
 Mania:
-<pre>!recentmania[play#] [ign resolvable]
-!rmania[play#] [ign resolvable]
-!rm[play#] [ign resolvable]</pre>
+<pre>
+!mania <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!spmania <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!spm <span style="color:#e344a4;font-weight: bold;">[ign?]</span></pre>
 								</td>
 								<td>
 									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
-										alt="" />Shows your most recent score from a specified mode. A play # can be specified where 1 is the most recent play and 50 is the 50th most recent play.</td>
-								<td>
-									<code>!rs4</code>
-									<br><code>!rt iaace</code>
-									<br><code>!rc2</code>
-									<br><code>!rm10</code>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<pre>!scorecompare [ign resolvable] [+mods]
-!scompare [ign resolvable] [+mods]
-!compare [ign resolvable] [+mods]
-!c [ign resolvable] [+mods]</pre>
-								</td>
-								<td>
-									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
-										alt="" />Compare a user's score to the most recently posted beatmap. You may optionally specify mods to filter the result. Use <code>+</code> for nomod.</td>
-								<td>
-									<div id="popup">
-										<code><a href="f/compare.png">!compare Amuro +HDHR<span><img src="f/compare.png" /></span></a></code>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<pre>!whatif [ign resolvable] +&lt;new pp value&gt;</pre>
-								</td>
-								<td>
-									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
-										alt="" />Calculates net pp change if a new score made it to a user's top 100</td>
-								<td>
-									<div id="popup">
-										<code><a href="f/whatifp400.png">!whatif +400<span><img src="f/whatifp400.png" /></span></a></code>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<pre>!whatif [ign resolvable] &lt;new beatmap pp value&gt;</pre>
-								</td>
-								<td>
-									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
-										alt="" />Calculates net pp change if a score on a beatmap was replaced</td>
-								<td>
-									<div id="popup">
-										<code><a href="f/whatif_400.png">!whatif 400<span><img src="f/whatif_400.png" /></span></a></code>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<pre>!statsplus [ign resolvable]
-!sp [ign resolvable]
-!osu [ign resolvable]
-!std [ign resolvable]
-!taiko [ign resolvable]
-!sptaiko [ign resolvable]
-!spt [ign resolvable]
-!ctb [ign resolvable]
-!spctb [ign resolvable]
-!spc [ign resolvable]
-!mania [ign resolvable]
-!spmania [ign resolvable]
-!spm [ign resolvable]</pre>
-								</td>
-								<td>
-									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
-										alt="" />Shows detailed osu stats</td>
+										alt="" />Shows detailed osu stats for a certain player</td>
 								<td>
 									<div id="popup">
 										<code><a href="f/ctb-iaace.png">!ctb iaace<span><img src="f/ctb-iaace.png" /></span></a></code>
@@ -384,24 +485,33 @@ Mania:
 								</td>
 							</tr>
 							<tr>
-								<td>
-									<pre>!statsplus-m [ign resolvable]
-!sp-m [ign resolvable]
-!osu-m [ign resolvable]
-!std-m [ign resolvable]
-!taiko-m [ign resolvable]
-!sptaiko-m [ign resolvable]
-!spt-m [ign resolvable]
-!ctb-m [ign resolvable]
-!spctb-m [ign resolvable]
-!spc-m [ign resolvable]
-!mania-m [ign resolvable]
-!spmania-m [ign resolvable]
-!spm-m [ign resolvable]</pre>
+								<td>Standard mode:
+									<pre>!statsplus-m <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!sp-m <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!osu-m <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!std-m <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+</pre>
+Taiko:
+<pre>
+!taiko-m <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!sptaiko-m <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!spt-m <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+</pre>
+Catch the Beat:
+<pre>
+!ctb-m <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!spctb-m <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!spc-m <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+</pre>
+Mania:
+<pre>
+!mania-m <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!spmania-m <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!spm-m <span style="color:#e344a4;font-weight: bold;">[ign?]</span></pre>
 								</td>
 								<td>
 									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
-										alt="" />Shows mod breakdown of top 100 scores</td>
+										alt="" />Shows mod breakdown of top 100 scores for a certain player</td>
 								<td>
 									<div id="popup">
 										<code><a href="f/spm-iaace.png">!sp-m iaace<span><img src="f/spm-iaace.png" /></span></a></code>
@@ -411,9 +521,9 @@ Mania:
 							<tr>
 								<td>
 									<pre>&lt;osu user page link&gt;
-!osusignature [ign resolvable]
-!osusign [ign resolvable]
-!osusig [ign resolvable]</pre>
+!osusignature <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!osusign <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+!osusig <span style="color:#e344a4;font-weight: bold;">[ign?]</span></pre>
 								</td>
 								<td>
 									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
@@ -426,16 +536,51 @@ Mania:
 							</tr>
 							<tr>
 								<td>
-									<pre>&lt;osu multi lobby link&gt;</pre>
+									<pre>!stats &lt;username&gt;
+!stat &lt;username&gt;</pre>
 								</td>
 								<td>
 									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
-										alt="" />Shows the most recently played beatmap and player scores in a multi lobby.</td>
+										alt="" />BoatBot !stats emulator</td>
 								<td>
 									<div id="popup">
-										<code><a href="f/mp.png">https://osu.ppy.sh/mp/53867418<span><img src="f/mp.png" /></span></a></code>
+										<code><a href="f/stats-iaace.png">!stats iaace<span><img src="f/stats-iaace.png" /></span></a></code>
 									</div>
 								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</li>
+			<li>
+				<div class="collapsible-header" style="background-color: #dbdbdb; color:black">
+					<i class="material-icons">expand_more</i>osu!&nbsp;<b>Beatmap Commands</b></div>
+				<div class="collapsible-body" style="background-color: #dbdbdb; color:black">
+					<ul class="browser-default">
+						<li><code>&lt;&gt;</code> indicate required parameters and
+							<code>[]</code> indicate optional parameters<br></li>
+						<li>"ign" means osu! username<br></li>
+						<li>what does <code><span style="color:#e344a4;font-weight: bold;">[ign?]</span></code> mean?
+							<ul class="browser-default">
+								<li><code>[]</code>: nothing needs to be specified if you want to pull up your own
+									information</li>
+								<li><code>ign</code>: the username (whatever it is)</li>
+								<li><code>$shortcut</code>: any $shortcut set for a user using <code>!setshortcut</code>
+								</li>
+								<li><code>@mention</code>: mention any other discord user</li>
+								<li><code>^</code>: the player whose information was most recently requested</li>
+							</ul>
+						</li>
+						<li>command use is not case sensitive.</li>
+					</ul><br>
+					<table class="bordered striped">
+						<tbody>
+							<tr>
+								<th>
+									<pre>COMMANDS vLazer</pre>
+								</th>
+								<th>ACTION</th>
+								<th>EXAMPLE</th>
 							</tr>
 							<tr>
 								<td>
@@ -478,19 +623,39 @@ Mania:
 									</div>
 								</td>
 							</tr>
+						</tbody>
+					</table>
+				</div>
+			</li>
+			<li>
+				<div class="collapsible-header" style="background-color: #dbdbdb; color:black">
+					<i class="material-icons">expand_more</i>General Commands</div>
+				<div class="collapsible-body" style="background-color: #dbdbdb; color:black">
+					<ul class="browser-default">
+						<li><code>&lt;&gt;</code> indicate required parameters and
+							<code>[]</code> indicate optional parameters<br></li>
+						<li>"ign" means osu! username<br></li>
+						<li>what does <code><span style="color:#e344a4;font-weight: bold;">[ign?]</span></code> mean?
+							<ul class="browser-default">
+								<li><code>[]</code>: nothing needs to be specified if you want to pull up your own
+									information</li>
+								<li><code>ign</code>: the username (whatever it is)</li>
+								<li><code>$shortcut</code>: any $shortcut set for a user using <code>!setshortcut</code>
+								</li>
+								<li><code>@mention</code>: mention any other discord user</li>
+								<li><code>^</code>: the player whose information was most recently requested</li>
+							</ul>
+						</li>
+						<li>command use is not case sensitive.</li>
+					</ul><br>
+					<table class="bordered striped">
+						<tbody>
 							<tr>
-								<td>
-									<pre>!stats &lt;username&gt;
-!stat &lt;username&gt;</pre>
-								</td>
-								<td>
-									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
-										alt="" />BoatBot !stats emulator</td>
-								<td>
-									<div id="popup">
-										<code><a href="f/stats-iaace.png">!stats iaace<span><img src="f/stats-iaace.png" /></span></a></code>
-									</div>
-								</td>
+								<th>
+									<pre>COMMANDS vLazer</pre>
+								</th>
+								<th>ACTION</th>
+								<th>EXAMPLE</th>
 							</tr>
 							<tr>
 								<td>
