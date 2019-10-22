@@ -80,7 +80,7 @@
 	<div class="container">
 		<h2>
 			<img src="f/helpserver.png" width="10%" height="10%"> BoatBot Documentation</h2>
-		<h4 style="color: #999999;">Serving the osu! community at no charge since May 25, 2016</h4>
+		<h4 style="color: #999999;">Serving the osu! community since May 25, 2016</h4>
 		<h6 style="color: #666666;">We support these following servers: osu.ppy.sh
 		</h6>
 		<div class="sexy_line"></div>
@@ -104,7 +104,7 @@
 							</tr>
 							<tr>
 								<td>Score Tracking</td>
-								<td>✅</td>
+								<td>To be repaired</td>
 								<td>⭕</td>
 							</tr>
 							<tr>
@@ -202,39 +202,39 @@ Please note this is a source-available project and not an open source project. A
 								<td>June 23, 2018</td>
 							</tr>
 							<tr>
-								<td>Concurrent v1 and Lazer operation</td>
-								<td>Active</td>
+								<td>Start of concurrent v1 and Lazer operation</td>
+								<td>Complete</td>
 								<td>June 25, 2018</td>
 							</tr>
 							<tr>
 								<td>osu! features migrated from v1 to Lazer</td>
-								<td>In Progress</td>
-								<td>December 31, 2019</td>
+								<td>In Progress (60%)</td>
+								<td>September 31, 2019</td>
 							</tr>
 							<tr>
 								<td>Disconnect Lazer from using v1 resources</td>
-								<td>Not yet</td>
-								<td>January 15, 2020</td>
+								<td>In Progress (15%)</td>
+								<td>September 15, 2019</td>
 							</tr>
 							<tr>
 								<td>Change v1 to BoatBot Classic Account (6 month deprecation)</td>
-								<td>Not yet</td>
-								<td>January 16, 2020</td>
+								<td>In Progress (0%)</td>
+								<td>September 15, 2019</td>
 							</tr>
 							<tr>
 								<td>Migrate non-osu features from v1 to Lazer</td>
-								<td>In Progress</td>
-								<td>March 1, 2020</td>
+								<td>In Progress (10%)</td>
+								<td>October 31, 2019</td>
 							</tr>
 							<tr>
 								<td>Disable v1 classic account permanently</td>
 								<td>Not yet</td>
-								<td>July 16, 2020</td>
+								<td>April 1, 2020</td>
 							</tr>
 							<tr>
 								<td>Stop processing v1 support requests (data/privacy)</td>
 								<td>Not yet</td>
-								<td>January 16, 2021</td>
+								<td>October 1, 2021</td>
 							</tr>
 						</tbody>
 					</table>
@@ -244,6 +244,23 @@ Please note this is a source-available project and not an open source project. A
 				<div class="collapsible-header" style="background-color: #dbdbdb; color:black">
 					<i class="material-icons">expand_more</i>osu!&nbsp;<b>Score Commands</b></div>
 				<div class="collapsible-body" style="background-color: #dbdbdb; color:black">
+					<ul class="browser-default">
+						<li><code>&lt;&gt;</code> indicate required parameters and
+							<code>[]</code> indicate optional parameters<br></li>
+						<li>"ign" means osu! username<br></li>
+						<li>what does <code><span style="color:#e344a4;font-weight: bold;">[ign?]</span></code> mean?
+							<ul class="browser-default">
+								<li><code>[]</code>: nothing needs to be specified if you want to pull up your own
+									information</li>
+								<li><code>ign</code>: the username (whatever it is)</li>
+								<li><code>$shortcut</code>: any $shortcut set for a user using <code>!setshortcut</code>
+								</li>
+								<li><code>@mention</code>: mention any other discord user</li>
+								<li><code>^</code>: the player whose information was most recently requested</li>
+							</ul>
+						</li>
+						<li>command use is not case sensitive.</li>
+					</ul><br>
 					<table class="bordered striped">
 						<tbody>
 							<tr>
@@ -657,6 +674,26 @@ Mania:
 								</th>
 								<th>ACTION</th>
 								<th>EXAMPLE</th>
+							</tr>
+							<tr>
+								<td>
+									<pre>!invite</pre>
+								</td>
+								<td>Gives a link to add BoatBot to another server.</td>
+								<td>
+									<code>!invite</code>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>!help
+!docs
+!documentation</pre>
+								</td>
+								<td>Gives a link to this website, as well as providing information on how to ask for help from our staff.</td>
+								<td>
+									<code>!docs</code>
+								</td>
 							</tr>
 							<tr>
 								<td>
@@ -1245,7 +1282,7 @@ Mania:
 
 BoatBot is not affiliated with ppy Ltd. or osu.ppy.sh .
 
-For additional help, please visit <a target="_blank" href="https://discord.gg/57Z8Npg">https://discord.gg/57Z8Npg</a></pre>
+For additional support, please visit <a target="_blank" href="https://discord.gg/57Z8Npg">https://discord.gg/57Z8Npg</a></pre>
 		<script type="text/javascript" src="f/index.js"></script>
 	</div>
 </body>
