@@ -209,6 +209,16 @@
 								<li><code>^</code>: the player whose information was most recently requested</li>
 							</ul>
 						</li>
+						<li>what does <code><span style="color:#fa8920;font-weight: bold;">[range?]</span></code> mean?
+							<ul class="browser-default">
+								<li><code>[]</code>: nothing needs to be specified if you want to use the default range</li>
+								<li><code>1-15</code>: the range of values (in this case, #1 to #15)</li>
+								<li><code>-15</code>: the range of values just before #15
+								</li>
+								<li><code>1-</code>: the range of values starting at #1</li>
+								<li><code>20</code>: show the top 20 values (#1 to #20)</li>
+							</ul>
+						</li>
 						<li>command use is not case sensitive.</li>
 					</ul><br>
 					<table class="bordered striped">
@@ -313,6 +323,36 @@ Mania:
 									<br><code>!tc2 iaace</code>
 									<br><code>!bm3 Design</code><span><img src="f/bm3-design.png" /></span></a></code>
 									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+Standard mode:
+<pre>!alltop<span style="color:#fa8920;font-weight: bold;">[range?]</span> <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+</pre>
+
+Taiko:
+<pre>!alltoptaiko<span style="color:#fa8920;font-weight: bold;">[range?]</span> <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+</pre>
+
+Catch the Beat:
+<pre>!alltopctb<span style="color:#fa8920;font-weight: bold;">[range?]</span> <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+</pre>
+
+Mania:
+<pre>!alltopmania<span style="color:#fa8920;font-weight: bold;">[range?]</span> <span style="color:#e344a4;font-weight: bold;">[ign?]</span>
+</pre>
+								</td>
+								<td>
+									<img class="alignnone" style="width: 20px; height: 20px;" src="f/osu.png"
+										alt="" />Shows multiple top pp plays from any player. The range of valid scores is #1 to #100.</td>
+								<td>
+
+									<div id="popup">
+										<a href="f/alltop.png"><code>!alltop</code>
+									<br><code>!alltop10</code>
+									<br><code>!alltop51-75 whitecat</code><span><img src="f/alltop.png" /></span></a></code>
+
 								</td>
 							</tr>
 							<tr>
